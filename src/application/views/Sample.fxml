@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.SampleController">
+   <left>
+      <Pane maxHeight="1.7976931348623157E308" prefHeight="628.0" prefWidth="530.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane layoutY="100.0" prefHeight="401.0" prefWidth="234.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="56.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" rotate="270.0" scaleX="2.0" scaleY="3.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <StackPane.margin>
+                        <Insets top="70.0" />
+                     </StackPane.margin>
+                  </ImageView>
+                  <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.0" prefWidth="230.0" translateX="25.0" translateY="-140.0">
+                     <children>
+                        <Label text="Customer Name" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="custName" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="177.0" promptText="Customer name" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.0" prefWidth="230.0" translateX="25.0" translateY="-65.0">
+                     <children>
+                        <Label text="Phone Number" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="phoneNum" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="177.0" promptText="(xxx) xxx-xxxx" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </StackPane>
+            <TitledPane animated="false" layoutX="232.0" layoutY="101.0" prefHeight="132.0" prefWidth="114.0" text="Topping">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                     <children>
+                        <RadioButton fx:id="op1" mnemonicParsing="false" selected="true" text="Cheese">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toppingToggleGroup" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="op2" mnemonicParsing="false" text="Vegetarian" toggleGroup="$toppingToggleGroup" />
+                        <RadioButton fx:id="op3" mnemonicParsing="false" text="Meat Lover" toggleGroup="$toppingToggleGroup" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <FlowPane layoutX="375.0" layoutY="99.0" prefHeight="49.0" prefWidth="153.0">
+               <children>
+                  <Label text="Size" />
+                  <ComboBox fx:id="sizeCombo" prefWidth="150.0" />
+               </children>
+            </FlowPane>
+            <FlowPane layoutX="375.0" layoutY="150.0" prefHeight="49.0" prefWidth="153.0">
+               <children>
+                  <Label text="Quantity" />
+                  <TextField fx:id="qty" text="1" />
+               </children>
+            </FlowPane>
+            <Button layoutX="316.0" layoutY="266.0" mnemonicParsing="false" onAction="#placeOrderBtn" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #12a43c;" text="Place Order" />
+            <Button layoutX="480.0" layoutY="208.0" mnemonicParsing="false" onAction="#clearBtn" text="Clear" />
+            <FlowPane layoutX="229.0" layoutY="310.0" prefHeight="190.0" prefWidth="295.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="254.0" text="Order Summary">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="summary" editable="false" prefHeight="241.0" prefWidth="301.0" wrapText="true" />
+               </children>
+            </FlowPane>
+            <Button layoutX="376.0" layoutY="208.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="25.0" prefWidth="74.0" text="Add" />
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="29.0" prefHeight="56.0" prefWidth="309.0" text="Javahell Pizza">
+               <font>
+                  <Font name="Bookman Old Style Bold Italic" size="39.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" startX="0.7772511848341233">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.75" green="0.17980323731899261" blue="0.1701388955116272" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5657894611358643" green="0.14079251885414124" blue="0.13358917832374573" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button layoutX="425.0" layoutY="578.0" mnemonicParsing="false" onAction="#reportBtn" text="Summary Report" />
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
